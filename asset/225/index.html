@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]> <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie10 lt-ie9 lt-ie8" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie10 lt-ie9" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js lt-ie10" id="ng-app" ng-app="storeApp" xmlns:ng="http://angularjs.org" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#"> <![endif]-->
+<!--[if (!IE)|(gt IE 9)]><!-->
+<html class="no-js" data-ng-app="storeApp">
+<!--<![endif]-->
 <head>    
   <meta name="viewport" content="width=1024" />
-  <title>ess :: Roundy's Supermarkets</title>
+  <title>Roundy's Supermarkets</title>
   <link href="/asset/225/styles/default.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="/asset/225/styles/chain.css" rel="stylesheet" type="text/css" media="screen" />
   <link rel="shortcut icon" type="image/x-icon" href="/asset/225/images/favicon.ico" />
@@ -11,29 +17,23 @@
 <body id="body">
   <div id="outer-container">
     <div id="container" class="clearfix">
-      <div id="StaticContentPage" class="main-wrapper group">
-
-      <img id="headerImage" alt="Roundy's Header Image" src="/asset/225/images/main_roundys.jpg">
-      <div id="mainContent"><img id="mainLogo" alt="Roundy's Logo" src="/asset/225/images/logo_roundys.jpg"><p>Roundy's Supermarkets, Inc. is a retail grocery company headquartered in Milwaukee, Wisconsin.<br>
-      We serve customers throughout Wisconsin and in the greater Chicago area.<br>
-      We operate four retail banners. Visit the banner websites by clicking on the logos below.</p>
-      <p>If you are looking for any of the following, please click on the appropriate logo below to visit the retail website:<br>
-        Store Team Member Careers • Roundy’s Brand Products • Contact Us • Giving Back</p>
-        <div class="logoRow_1"><a class="chainLogo_pns" href="http://www.picknsave.com" target="_blank" title="Pick'n Save"></a><a class="chainLogo_copps" href="http://www.copps.com" target="_blank" title="Copps"></a></div>
-        <div class="logoRow_2"><a class="chainLogo_metro" href="http://www.metromarket.net" target="_blank" title="Metro Market"></a><a class="chainLogo_marianos" href="http://www.marianos.com" target="_blank" title="Mariano's Fresh Market"></a></div>
-        <div class="btmRow_container">
-          <p>For Roundy’s, Inc.<br>
-            investor information,<br>
-            click here:</p><a class="investRelations_btn" href="http://phx.corporate-ir.net/phoenix.zhtml?c=251227&amp;p=irol-IRHome" target="_blank" title="Investor Relations"></a></div>
-            <div class="btmRow_container">
-              <p>For Roundy’s corporate, store management,<br>
-                commissary and distribution careers,<br>
-                click here:</p><a class="corpCareers_btn" href="http://jobs.roundys.com/" target="_blank" title="Corporate Careers"></a></div>
-                <div class="employee"><a href="/ess"><p>For our employees, <br>click here:</p><img class="employeeImage" src="http://upload.gsngrocers.com/elvs/staticcontent/uploadfiles/225/oneRoundysLogo.png"></a></div>
-              </div>        
+      <div id="StaticContentPage" class="main-wrapper group" data-ng-view="">
       </div>
     </div>
   </div>
+
+  <!-- above the fold scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
+  <script data-gsnid="[chainid]" src="http://cdn-staging.gsngrocers.com/script/gsndfp/gsndfp.min.js?nocache=1"></script>
+  <script src="/asset/225/storeApp.js?nocache=1"></script>
+
+  <!-- angular depencencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-sanitize.min.js"></script><!-- security -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-route.min.js"></script><!-- routing and history -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-animate.min.js"></script><!-- carousel -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular-touch.min.js"></script> <!-- touch polyfill for ng-click -->
+
 </body>
 </html>
 

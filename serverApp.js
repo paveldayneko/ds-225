@@ -27,14 +27,13 @@ function startServer(chainId) {
   // handle the rest as html
   app.get('*', function (request, response) {
     var myPath = url.parse(request.url).pathname.toLowerCase();
-    if (myPath.length <= 2 && myPath.indexOf('.') < 0) {
-      myPath = path.join('asset/225/index.html');
+    if (myPath.length <= 2 || myPath.indexOf('.') < 0){
+      myPath = path.join('asset/' + chainId + '/index.html');
     }
 
-    if (!(myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0)) {
-      myPath = path.join('/asset/225', myPath, 'index.html');
+    if (!(myPath.indexOf('.') > 0 && myPath.indexOf('.aspx') < 0) ){
+      myPath = path.join('asset/' + chainId + '/index.html');
     }
-    console.log(myPath);
 
     var fullPath = path.join(servicePath, myPath);
     if (!fs.existsSync(fullPath)) {
