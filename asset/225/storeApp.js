@@ -20,7 +20,7 @@
 
 storeApp.controller('MyCmsCtrl', ['$scope', '$http', '$location', '$sce', function ($scope, $http, $location, $sce) {
   var myUrl = $location.url().replace('/', '').replace(/\s/gi, '-').replace(/\.(aspx|gsn)$/gi, '') || 'home page';
-  var url =  "http://clientapi.gsn2.com/api/v1/Content/GetSingleContent/225?position=1&name=" + encodeURIComponent(myUrl);
+  var url =  "/proxy/Content/GetSingleContent/225?position=1&name=" + encodeURIComponent(myUrl);
   $scope.vm = {};
   $http.get(url).success(function (data) {
     if (data == "null"){
