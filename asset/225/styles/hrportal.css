@@ -1,0 +1,491 @@
+body
+{
+	background-color: #ecf0f1;
+	color: #8f9192;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;;
+	font-size: 13px; 
+}
+
+html
+{
+	background-color: #ecf0f1;
+	background-image: none;
+}
+
+p, li
+{
+	color: #8f9192;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+h2, h3
+{
+	border: none;
+	color: #569bd4;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: normal;
+	margin: 0 0 -15px;
+	padding: 0 0 15px 15px;
+}
+
+h4
+{
+	color: #008265;
+	font-weight: normal;
+	margin: 0;
+}
+
+a:link, a:visited, a:active, a:hover
+{
+	color: #008265;
+}
+
+/*------ Header ------*/
+#StoreHeader
+{
+	display: none;
+}
+
+#container
+{
+	min-height: 0;
+	padding: 0;
+	width: 910px;
+}
+
+#corpHeader
+{
+	background: url(http://upload.gsngrocers.com/elvs/staticcontent/uploadfiles/225/headerBG.png);
+	height: 87px;
+	margin-bottom: 30px;
+}
+
+.corpLogo
+{
+	padding: 16px 40px;
+}
+
+.logBtn
+{
+	float: right;
+	margin: -63px -68px;
+	*float: none;
+	*margin: -86px 390px; /*IE7 hack*/
+}
+.homeBtn
+{
+	float: right;
+	margin: -63px -68px;
+	*float: none;
+	*margin: -63px -68px; /*IE7 hack*/
+}
+
+/*------ Header Quick Links Dropdown ------*/
+.links
+{
+	float: right;
+	margin: -76px 0 0 20px;
+}
+
+.quickLinks
+{
+    list-style:none;
+    font-weight:bold;
+    margin-bottom:10px;
+    float:right;
+}
+
+.quickLinks li
+{
+    float:left;
+    margin-right:10px;
+    position:relative;
+    z-index: 125;
+}
+
+.quickLinks a
+{
+    display:block;
+    padding:5px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.quickLinks a:hover
+{
+    color:#fff;
+    text-decoration:underline;
+}
+
+/*--- DROPDOWN ---*/
+.quickLinks ul
+{
+   	background-color: none;
+    list-style:none;
+    position:absolute;
+    left:-9999px;
+    background-image: url(http://upload.gsngrocers.com/elvs/staticcontent/uploadfiles/225/quickLinksTop3.png); background-repeat: no-repeat;
+    height: 663px;
+    padding: 0 32px;
+}
+
+.quickLinks ul li
+{
+	padding-top:1px;
+	*padding: 0;
+    float:none;
+    margin: 27px 0 -29px;
+}
+
+.quickLinks ul a
+{
+    white-space:nowrap;
+}
+
+.quickLinks li:hover ul
+{ /* Display the dropdown on hover */
+    left:25px;
+    top: -35px;
+    width: 100%;
+    *width: 200px;
+    *position: absolute;
+    *left: 565px;
+}
+
+.quickLinks li:hover a
+{ 
+    text-decoration:underline;
+}
+
+.quickLinks li:hover ul a
+{ 
+    text-decoration:none;
+}
+
+.quickLinks li:hover ul li a:hover
+{ 
+    background:#1c4177;
+    width: 60%;
+    *width: 180px;
+    border-radius: 5px;
+}
+
+.quickLinks a, p
+{
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: normal;
+}
+
+.quickLinks h4
+{
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+/*------ Left Menu ------*/
+#essMenu
+{
+	z-index: 2;
+	margin-left: 40px;
+	position: absolute;
+	padding-top: 20px;
+}
+
+#essMenu .tooltip
+{
+	position: relative;
+}
+
+#essMenu .tooltip:hover:after
+{
+	background: #f5f4d8;
+	top: 1px;
+	color: #000;
+	content: attr(data-title);
+	left: 80%;
+	padding: 5px 15px;
+	position: absolute;
+	z-index: 98;
+	width: 220px;
+	border: 1px solid black;
+	font-size: 11px;
+}
+
+#essMenu p, #essMenu ul, #essMenu li, #essMenu div
+{
+	padding: 0;
+	margin: 0;
+}
+
+#essMenu .parent-menu
+{
+	background-color: #ecf0f1;
+	float: left;
+	min-width: 234px;
+	min-height: 500px;
+}
+
+#essMenu ul
+{
+	list-style-type: none;
+}
+#essMenu > ul > li
+{
+	background: url("http://upload.gsngrocers.com/elvs/staticcontent/uploadfiles/225/divider.png") no-repeat 15px 33px;
+}
+
+#essMenu ul li a,
+#essMenu > ul > li > span
+{
+	padding: 10px 15px 10px 20px;
+	display: inline-block;
+	color: #569bd4;
+	text-decoration: none;
+}
+
+#essMenu > ul > li > a,
+#essMenu > ul > li > span
+{
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+#essMenu .parent-menu > li > .submenu
+{
+	display: none;
+	padding-left: 18px;
+}
+
+#essMenu .parent-menu > li:hover > .submenu
+{
+	display: block;
+}
+
+#essMenu .parent-menu > li:hover > .submenu > li:before
+{
+	content: '\b7\a0';
+}
+
+#essMenu .parent-menu > li.hasSubmenu
+{
+	background-position: bottom;
+}
+
+#essMenu .parent-menu > li.hasSubmenu > .submenu > li > a{
+	padding-top: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+/*------ Content ------*/
+.survey
+{
+	position: absolute;
+	margin: -90px 524px;
+}
+
+.survey
+{
+	/*IE Hack*/
+	z-index: 10\9;
+}
+
+#corpContent
+{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	clear: both;
+	float: right;
+	margin-right: 30px;
+	width: 590px;
+}
+
+#corpContent h2:first-child
+{
+	margin-bottom: 0;
+}
+
+#corpContent p
+{
+	color: #8f9192;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 13px;
+	margin: 0;
+}
+
+#corpContent li
+{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	line-height: 23px;
+}
+
+#corpContentFull{padding-top:30px;}
+#corpContentFull .careerHeader{
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+width: 335px;
+color: white;
+background-color: #5FA0D6;
+padding: 10px;
+border-radius: 6px;
+margin-left:10px;
+margin-bottom: 25px;}	
+
+.tutorials
+{
+	margin: 25px 0;
+}
+
+.corpButton
+{
+	margin: 0 -6px;
+	padding: 10px;
+}
+
+.careButton
+{
+	margin: -18px -4px 0;
+	padding: 10px;
+}
+
+#corpColumn
+{
+	float: left:
+	width: 300px;
+}
+
+#corpColumn h1
+{
+	color: #569bd4;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: normal;
+	padding: 0 20px;
+}
+
+#utility
+{
+	background-color: #ecf0f1;
+	border-radius: 10px;
+	float: left;
+	margin-left: 40px;
+	width: 234px;
+}
+
+#utility ul
+{
+	margin-bottom: -6px;			
+}
+
+.divide
+{
+	padding: 0 14px;
+}
+
+.tutorialsContent
+{
+	float: left;
+	width: 50%;
+}
+
+.tutorialsContent img
+{
+	width: 375px;
+	height: 60px;
+}
+
+.tutorialsContent li, .videos li, .newsletters li, #benefitsContent li, .careerguides li
+{
+	
+	list-style-type: none;
+}
+
+.tutorialsContent li a, .videos li a, .newsletters li a, #benefitsContent li a, .careerguides li a, .internalAppLink a
+{
+	color: #8f9192;
+}
+
+.videos, .careerguides
+{
+	float: left;
+	width: 50%;
+}
+
+.videos img
+{
+	width: 375px;
+	height: 60px;
+}
+
+#benefitsContent
+{
+	padding: 0 0 0 40px;
+	width: 100%;
+}
+
+.reform
+{
+	float: left;
+	width: 450px;
+}
+
+.enroll
+{
+	float: left;
+	width: 450px;
+}
+.internalAppLink {display:inline-block;margin-left: 40px;margin-top: 45px;}
+/*------ Footer ------*/
+.returnHome{
+    position: absolute;
+    bottom: 120px;
+    left: 45%;
+    text-align: center;
+}
+#corpFooter
+{
+	background-color: #dfeeeb;
+	float: left;
+	height: 100px;
+	margin: 10px 0;
+    padding: 0 21px;
+    margin-top: 200px;
+}
+
+.rowLogos ul
+{
+	padding-top: 14px;
+	width: 828px;
+}
+
+.rowLogos li
+{
+	display: inline;
+	padding-right:35px;
+}
+
+.rowLogos a
+{
+	display: inline-block;
+	padding: 0 22px;
+}
+
+ul li p
+{
+	margin: 0;
+}
+
+#GsnFooter 
+{
+    background-color: #dfeeeb;
+    height: 29px;
+    margin: -26px 0;
+    width: 910px;
+}
+
+.empl-shop
+{
+	padding-top: 30px;
+	margin-bottom: -180px;
+}
