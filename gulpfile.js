@@ -135,6 +135,13 @@ function createDeployTask(chain) {
 }
 
 gulp.task('build-deploy', function(cb){
+  for(var c in config.chains) {
+    var chain = config.chains[c];
+    if (chain != 'common') {
+      createDeployTask(chain);
+    }
+  };
+
   var chainId = path.resolve('.').split(path.sep).pop().replace(/\D+/gi, '');
   createDeployTask(chainId);
   runSeq(config.tasksDeploy, cb);
